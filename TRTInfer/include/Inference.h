@@ -23,7 +23,7 @@ namespace TRTInferV1
     {
     private:
         const char *INPUT_BLOB_NAME = "images";   // 输入Tensor名称
-        const char *OUTPUT_BLOB_NAME = "output0"; // 输出Tensor名称
+        const char *OUTPUT_BLOB_NAME = "output"; // 输出Tensor名称
         int batch_size = 0;
         int num_classes = -1;
         int input_size = 0;

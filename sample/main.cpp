@@ -8,16 +8,16 @@ int main()
     // cv::namedWindow("Test4", cv::WINDOW_NORMAL);
     TRTInferV1::TRTInfer myInfer(0);
     // nvinfer1::IHostMemory *data = myInfer.createEngine("/home/ninefish/nine-fish/TRTInferenceForYolo/sample/build/best.onnx", 4, 1280, 1280, 0);
-    // myInfer.saveEngineFile(data, "/home/ninefish/nine-fish/TRTInferenceForYolo/sample/engines/model_trt.engine");
-    myInfer.initModule("/home/ninefish/nine-fish/TRTInferenceForYolo/sample/engines/model_trt.engine", 1, 1);
+    // myInfer.saveEngineFile(data, "/home/jacket/Desktop/njtu_hik_ros2/src/TRTInferenceForYolo/sample/engines/opt-1208-001.engine");
+    myInfer.initModule("/home/jacket/Desktop/njtu_hik_ros2/src/TRTInferenceForYolo/sample/engines/opt-1208-001.engine", 1, 8);
 
     // cv::VideoCapture cap(0);
     std::vector<cv::Mat> frames;
 
     // cv::Mat src = cv::imread("/home/ninefish/nine-fish/TRTInferenceForYolo/sample/46.jpg");
-    cv::Mat src2 = cv::imread("/home/ninefish/nine-fish/TRTInferenceForYolo/sample/SAU0076.jpg");
+    // cv::Mat src2 = cv::imread("/home/jacket/Desktop/njtu_hik_ros2/src/TRTInferenceForYolo/sample/SAU0076.jpg");
     // cv::Mat src3 = cv::imread("/home/ninefish/nine-fish/TRTInferenceForYolo/sample/1674.jpg");
-    // cv::Mat src2 = cv::imread("/home/ninefish/nine-fish/TRTInferenceForYolo/sample/SAU0830.jpg");
+    cv::Mat src2 = cv::imread("/home/jacket/Desktop/njtu_hik_ros2/src/TRTInferenceForYolo/sample/SAU0830.jpg");
 
     // myInfer.calculate_inter_frame_compensation(120);
 

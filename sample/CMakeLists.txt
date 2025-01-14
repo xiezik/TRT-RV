@@ -19,12 +19,8 @@ set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS}  -std=c++17 -O3 -Xcompiler -fPIC -g -w $
 include_directories(${PROJECT_SOURCE_DIR}/include
                     ${PROJECT_SOURCE_DIR}/../TRTInfer/include)
 # include and link dirs of cuda and tensorrt, you need adapt them if yours are different
-# cuda
-include_directories(/data/cuda/cuda-11.8/cuda/include)
-link_directories(/data/cuda/cuda-11.8/cuda/lib)
-# cudnn
-include_directories(/data/cuda/cuda-11.8/cudnn/v8.0.4/include)
-link_directories(/data/cuda/cuda-11.8/cudnn/v8.0.4/lib64)
+include_directories(${CUDA_INCLUDE_DIRS} /usr/include/x86_64-linux-gnu)
+link_directories(${CUDA_LIBRARY_DIRS} /usr/lib/x86_64-linux-gnu)
 
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED")

@@ -32,8 +32,8 @@
 *.app
 
 .vscode
-sample/build
-sample/engines
+# sample/build
+# sample/engines
 best.onnx
 sample/1.jpg
 model_trt.engine
